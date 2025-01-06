@@ -48,7 +48,7 @@ $pre-background: $background !default;
 // Typography
 
 $family-primary: iv.$family-sans-serif !default;
-$family-secondary: iv.$family-sans-serif !default;
+$family-secondary: iv.$family-titles !default;
 $family-code: iv.$family-monospace !default;
 
 $size-small: iv.$size-7 !default;
@@ -64,49 +64,38 @@ $shadow-color: iv.$black !default;
 $custom-colors: null !default;
 $custom-shades: null !default;
 
-$colors: fn.mergeColorMaps(
-  (
-    "white": (
-      iv.$white,
-      iv.$black,
+$colors: fn.mergeColorMaps(("white": (iv.$white,
+        iv.$black,
+      ),
+      "black": (iv.$black,
+        iv.$white,
+      ),
+      "light": ($light,
+        $dark,
+      ),
+      "dark": ($dark,
+        $light,
+      ),
+      "text": $text,
+      "primary": $primary,
+      "link": $link,
+      "info": $info,
+      "success": $success,
+      "warning": $warning,
+      "danger": $danger,
     ),
-    "black": (
-      iv.$black,
-      iv.$white,
-    ),
-    "light": (
-      $light,
-      $dark,
-    ),
-    "dark": (
-      $dark,
-      $light,
-    ),
-    "text": $text,
-    "primary": $primary,
-    "link": $link,
-    "info": $info,
-    "success": $success,
-    "warning": $warning,
-    "danger": $danger,
-  ),
-  $custom-colors
-) !default;
+    $custom-colors) !default;
 
-$shades: fn.mergeColorMaps(
-  (
-    "black-bis": iv.$black-bis,
-    "black-ter": iv.$black-ter,
-    "grey-darker": iv.$grey-darker,
-    "grey-dark": iv.$grey-dark,
-    "grey": iv.$grey,
-    "grey-light": iv.$grey-light,
-    "grey-lighter": iv.$grey-lighter,
-    "white-ter": iv.$white-ter,
-    "white-bis": iv.$white-bis,
-  ),
-  $custom-shades
-) !default;
+$shades: fn.mergeColorMaps(("black-bis": iv.$black-bis,
+      "black-ter": iv.$black-ter,
+      "grey-darker": iv.$grey-darker,
+      "grey-dark": iv.$grey-dark,
+      "grey": iv.$grey,
+      "grey-light": iv.$grey-light,
+      "grey-lighter": iv.$grey-lighter,
+      "white-ter": iv.$white-ter,
+      "white-bis": iv.$white-bis,
+    ),
+    $custom-shades) !default;
 
-$sizes: iv.$size-1 iv.$size-2 iv.$size-3 iv.$size-4 iv.$size-5 iv.$size-6
-  iv.$size-7 !default;
+$sizes: iv.$size-1 iv.$size-2 iv.$size-3 iv.$size-4 iv.$size-5 iv.$size-6 iv.$size-7 !default;

@@ -1,4 +1,14 @@
 @charset "utf-8";
 
+$a7darkred: rgb(206, 53, 24);
+$a7lightred: hsl(10, 75%, 91%);
+$a7oat: hsl(31, 17%, 91%);
+
 /*! bulma.io v1.0.2 | MIT License | github.com/jgthms/bulma */
-@use "sass";
+@use "sass" with ($family-primary: 'brandon-grotesque',
+  $family-secondary: "Rift",
+  $primary: $a7darkred,
+  $link: $a7oat,
+  $info: #E9D8C2);
+
+@import url("https://use.typekit.net/ill8jku.css");
